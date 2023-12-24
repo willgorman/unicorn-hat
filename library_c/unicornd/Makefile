@@ -8,7 +8,7 @@ $(ws281x_path)/libws2811.a:
 	scons -C $(ws281x_path)
 
 unicornd: unicornd.c $(ws281x_path)/libws2811.a
-	gcc -Wall unicornd.c -o unicornd -I$(ws281x_path) -L$(ws281x_path) -lws2811
+	gcc -Wall unicornd.c -o unicornd -I$(ws281x_path) -L$(ws281x_path) -lws2811 -lm
 
 clean:
 	scons -C $(ws281x_path) --clean
